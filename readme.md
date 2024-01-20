@@ -51,13 +51,9 @@ The expected output of console.log(double); is:
 numbers.map((x) => x * 2);
 ```
 
-The .map() method iterates through each element of the array once. The callback function (in this case, (x) => x * 2) is executed once for each element. 
- 
-The operation inside the callback function is a simple arithmetic operation, which is considered O(1).
-Therefore, for n elements, you would have n O(1) operations, resulting in O(n) time complexity for the .map() operation.
-Printing Output (console.log(double);):
+The .map() method, has a time complexity of O(n) with n being the length of the numbers array. This means the time it takes to run this code grows linearly with the size of the input array.
 
-In terms of time complexity, the .map() method, has a time complexity of O(n). 
+The space complexity of this code is also O(n), This is because the amount of additional memory used by the program grows linearly with the input size, due to the new array being created.
 
 # Use Case:
 
