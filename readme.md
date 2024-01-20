@@ -22,13 +22,13 @@ A new array with each element being the result of the callback function
  
 # Algorithm description:
 
----js
+```js
 const numbers = [1, 2, 3, 4, 5];
 
 In this example, we have an array named numbers.
 We initialized a variable using the const keyword, and named the variable numbers. 
 
----js
+```js
 const double = numbers.map((x) => x * 2);
 
 const double declares a new constant named double, which will store the result of the .map() operation.
@@ -37,7 +37,7 @@ numbers.map() is calling the .map() method on the numbers array.
 
 ((x) => x * 2) is an arrow function that takes a single parameter x (representing an element from the numbers array) and returns the value of x multiplied by 2.
 
----js
+```js
 Console.log(double); 
 
 Prints the elements of the double array to the console.
@@ -47,7 +47,7 @@ The expected output of console.log(double); is:
 
 # Big O evaluation:
 
---- js 
+```js 
 numbers.map((x) => x * 2);
 
 The .map() method iterates through each element of the array once. The callback function (in this case, (x) => x * 2) is executed once for each element. 
@@ -65,7 +65,7 @@ We can also use .map to square values in an array.
 
 Ex: You have an array of numbers representing measurements in a scientific experiment, and you need to square each measurement for analysis.
 
----js
+```js
 const measurements = [3, 7, 9, 5, 2];
 
 // Use the .map() function to square each measurement
@@ -80,7 +80,7 @@ In this case, the .map() function is used to square each number in the measureme
 The .map() function is used to double each element, but since there are no elements, the callback function is never invoked.
 The result is another empty array.
 
---- js 
+```js 
 Ex: Empty Array
 
 const numbers = [];
@@ -95,7 +95,7 @@ console.log(doubled);  // Expected output: []
 MDN Web docs array.map:
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map 
 
-Chat GPT Big O evaluation, edge:
+Chat GPT Big O evaluation, edge cases:
 https://chat.openai.com/share/5ddbada6-d1e7-43ef-899b-160c20a3e70b 
 
   
