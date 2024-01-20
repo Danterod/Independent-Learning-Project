@@ -24,13 +24,13 @@ A new array with each element being the result of the callback function
 
 ```js
 const numbers = [1, 2, 3, 4, 5];
-
+```
 In this example, we have an array named numbers.
 We initialized a variable using the const keyword, and named the variable numbers. 
 
 ```js
 const double = numbers.map((x) => x * 2);
-
+```
 const double declares a new constant named double, which will store the result of the .map() operation.
 
 numbers.map() is calling the .map() method on the numbers array. 
@@ -39,7 +39,7 @@ numbers.map() is calling the .map() method on the numbers array.
 
 ```js
 Console.log(double); 
-
+```
 Prints the elements of the double array to the console.
 The expected output of console.log(double); is:
 [2, 4, 6, 8, 10] resulting in each element multiplied by 2
@@ -49,6 +49,7 @@ The expected output of console.log(double); is:
 
 ```js 
 numbers.map((x) => x * 2);
+```
 
 The .map() method iterates through each element of the array once. The callback function (in this case, (x) => x * 2) is executed once for each element. 
  
@@ -67,7 +68,7 @@ Ex: You have an array of numbers representing measurements in a scientific exper
 
 ```js
 const measurements = [3, 7, 9, 5, 2];
-
+```
 // Use the .map() function to square each measurement
 const squaredMeasurements = measurements.map(x => x * x);
 
@@ -88,7 +89,7 @@ const numbers = [];
 const doubled = numbers.map(x => x * 2);
  
 console.log(doubled);  // Expected output: []
-
+```
 
 # Resources:
 
