@@ -1,12 +1,35 @@
-                             .map in JS
+                    .map in JS, Dante Rodriguez 10.6 N&W
+
+# Introduction
 
 The .map() method in JavaScript creates a new array with the results of calling a provided function on every element in the original array
+
+Syntax of .map:
+const newArray = array.map(function(currentValue, index, arr), thisValue)
+Parameters:
+function(currentValue, index, arr): this is a function that produces an element of the new array, taking three arguments:
+
+currentValue (required) - The current element being processed in the array.
+
+index (optional) - The index of the current element being processed in the array.
+
+arr (optional) - The array map was called upon.
+
+thisValue (optional): A value to use as this when executing the callback function. If not provided, or if it's undefined, the global object will be used as this.
+
+Return Value:
+A new array with each element being the result of the callback function
  
-In this example:
+# Algorithm description:
 
-We have an array named numbers.
+---js
+const numbers = [1, 2, 3, 4, 5];
 
+In this example, we have an array named numbers.
 We initialized a variable using the const keyword, and named the variable numbers. 
+
+---js
+const double = numbers.map((x) => x * 2);
 
 const double declares a new constant named double, which will store the result of the .map() operation.
 
@@ -14,23 +37,18 @@ numbers.map() is calling the .map() method on the numbers array.
 
 ((x) => x * 2) is an arrow function that takes a single parameter x (representing an element from the numbers array) and returns the value of x multiplied by 2.
 
-The .map() method will call this arrow function once for each element in the numbers array, each time passing it the current element (x), and then it creates a new array from the results returned by the arrow function. 
+---js
+Console.log(double); 
 
-console.log(double);
-
-Console.log(double); prints the elements of the double array to the console.
-
+Prints the elements of the double array to the console.
 The expected output of console.log(double); is:
-[2, 4, 6, 8, 10]
+[2, 4, 6, 8, 10] resulting in each element multiplied by 2
 
-Each element of the original numbers array has been multiplied by 2.
 
-Big O evaluation:
-(const numbers = [1, 2, 3, 4, 5];):
+# Big O evaluation:
 
-This line of code is just a declaration, so its time complexity is O(1).
-
-(const double = numbers.map((x) => x * 2);):
+--- js 
+numbers.map((x) => x * 2);
 
 The .map() method iterates through each element of the array once. The callback function (in this case, (x) => x * 2) is executed once for each element. 
  
@@ -40,13 +58,14 @@ Printing Output (console.log(double);):
 
 In terms of time complexity, the .map() method, has a time complexity of O(n). 
 
-Use Case:
+# Use Case:
 
 Calculating Squared Values of an Array of Numbers
 We can also use .map to square values in an array. 
 
 Ex: You have an array of numbers representing measurements in a scientific experiment, and you need to square each measurement for analysis.
 
+---js
 const measurements = [3, 7, 9, 5, 2];
 
 // Use the .map() function to square each measurement
@@ -56,20 +75,22 @@ console.log(squaredMeasurements);
 // Expected output: [9, 49, 81, 25, 4]
 In this case, the .map() function is used to square each number in the measurements array
 
-Edge case: When you apply .map() to an empty array, the callback function will not execute because they're no elements to iterate over. The numbers array is empty.
+# Edge case:
+ When you apply .map() to an empty array, the callback function will not execute because they're no elements to iterate over. The numbers array is empty.
 The .map() function is used to double each element, but since there are no elements, the callback function is never invoked.
 The result is another empty array.
 
+--- js 
 Ex: Empty Array
 
 const numbers = [];
 
 const doubled = numbers.map(x => x * 2);
-
+ 
 console.log(doubled);  // Expected output: []
 
 
-Resources:
+# Resources:
 
 MDN Web docs array.map:
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map 
