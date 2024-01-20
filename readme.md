@@ -19,8 +19,18 @@ thisValue (optional): A value to use as this when executing the callback functio
 
 Return Value:
 A new array with each element being the result of the callback function
+
+```js
+const array1 = [1, 4, 9, 16];
+
+// Pass a function to map
+const map1 = array1.map((x) => x * 2);
+
+console.log(map1);
+// Expected output: Array [2, 8, 18, 32]
+```
  
-# Algorithm description:
+# Algorithm Description:
 
 ```js
 const numbers = [1, 2, 3, 4, 5];
@@ -45,7 +55,7 @@ The expected output of console.log(double); is:
 [2, 4, 6, 8, 10] resulting in each element multiplied by 2
 
 
-# Big O evaluation:
+# Big O Evaluation:
 
 ```js 
 numbers.map((x) => x * 2);
